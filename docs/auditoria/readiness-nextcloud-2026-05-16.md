@@ -75,6 +75,19 @@ O ambiente acessível ao Codex continuou compatível com macOS local, não com o
 | `nproc` | Indisponível: comando não encontrado no ambiente disponível. |
 | `top -bn1 \| head -40` | Sintaxe Linux rejeitada pelo `top` do ambiente disponível, compatível com macOS. |
 
+### Verificações complementares de serviços
+
+| Comando | Resultado seguro |
+| --- | --- |
+| `free -h` | Indisponível: comando não encontrado no ambiente disponível. |
+| `df -h` | Executado no ambiente disponível; retornou volumes locais e não deve ser usado para dimensionar o VPS KYOTO. |
+| `docker ps` | Indisponível: `docker` não encontrado no ambiente disponível. |
+| `docker stats --no-stream` | Indisponível: `docker` não encontrado no ambiente disponível. |
+| `sudo nginx -t` | Não executado com privilégios: `sudo` exigiu senha no ambiente disponível. |
+| `sudo certbot certificates` | Não executado com privilégios: `sudo` exigiu senha no ambiente disponível. |
+| `sudo ufw status verbose` | Não executado com privilégios: `sudo` exigiu senha no ambiente disponível. |
+| `sudo fail2ban-client status` | Não executado com privilégios: `sudo` exigiu senha no ambiente disponível. |
+
 ### Consistência entre documentado e real
 
 | Item | Status | Comentário |
@@ -85,6 +98,10 @@ O ambiente acessível ao Codex continuou compatível com macOS local, não com o
 | Recursos de disco do VPS | Não validado | `df -h` retornou discos locais, não o VPS. |
 | Topologia de blocos | Não validado | `lsblk` não está disponível no ambiente acessível. |
 | Carga de processos Linux | Não validado | `top -bn1` não é aceito pelo `top` local. |
+| Containers Docker | Não validado | `docker` não está disponível no ambiente acessível. |
+| Nginx ativo | Não validado | Teste com `sudo` não avançou sem senha no ambiente acessível. |
+| Certificados TLS | Não validado | Consulta com `sudo` não avançou sem senha no ambiente acessível. |
+| Firewall e Fail2ban | Não validado | Consultas com `sudo` não avançaram sem senha no ambiente acessível. |
 
 ---
 
