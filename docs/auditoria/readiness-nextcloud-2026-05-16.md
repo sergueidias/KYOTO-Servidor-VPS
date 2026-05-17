@@ -16,6 +16,8 @@ Conclusão crítica: a prontidão para Nextcloud não está validada. A document
 
 O ambiente acessível ao Codex continuou compatível com macOS local, não com o VPS Linux esperado. Por isso, qualquer resultado de recursos abaixo serve apenas para confirmar a inconsistência de ambiente, não para dimensionar o Nextcloud.
 
+Conclusão madura: o PR atual está correto como melhoria de processo e segurança documental, mas ainda não resolve a pergunta principal: **o KYOTO aguenta Nextcloud?** Para responder isso, a próxima tarefa precisa entrar no VPS correto via SSH autorizado, coletar apenas resumos mascarados e gerar uma auditoria real.
+
 ---
 
 ## ⚙️ Estrutura / Funcionamento
@@ -129,6 +131,32 @@ Status: **não pronto para instalar Nextcloud**.
 Motivo: a documentação está adequada como base pública, mas o estado real do VPS KYOTO ainda não foi comprovado. Não há evidência suficiente de CPU, memória, disco, carga, isolamento, backup, TLS e compatibilidade operacional com os serviços atuais.
 
 Antes de qualquer instalação futura, executar a auditoria diretamente no VPS Linux KYOTO e registrar apenas um resumo mascarado dos resultados.
+
+O trabalho feito até aqui prova que o processo está ficando mais seguro. Ele ainda não prova capacidade operacional do servidor para Nextcloud.
+
+---
+
+## 🧭 Próxima tarefa do Codex
+
+Entrar no VPS correto via SSH autorizado, executar somente comandos de leitura, coletar apenas resumos mascarados e produzir uma auditoria real do servidor KYOTO.
+
+Escopo permitido:
+
+- confirmar identidade do host sem publicar hostname real, IP ou usuário
+- resumir CPU, memória, disco e carga sem publicar saídas brutas completas
+- resumir containers, redes e volumes Docker sem expor nomes sensíveis, portas privadas ou variáveis
+- validar Nginx, certificados, firewall e Fail2ban sem modificar configuração
+- comparar o estado real com a documentação atual
+- concluir se há ou não base mínima para planejar Nextcloud
+
+Fora de escopo:
+
+- instalar Nextcloud
+- instalar pacotes
+- alterar produção
+- reiniciar containers
+- modificar Nginx, firewall ou compose
+- publicar IPs, portas reais, domínios privados, usuários, tokens, senhas, secrets ou chaves
 
 ---
 
