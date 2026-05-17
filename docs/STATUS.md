@@ -7,7 +7,7 @@
 - Template de documentação estabelecido
 - Regras de segurança implementadas
 - Auditoria documental inicial registrada em `docs/auditoria/servidor-kyoto-2026-05-16.md`
-- Revisão crítica de readiness para Nextcloud registrada em `docs/auditoria/readiness-nextcloud-2026-05-16.md`
+- Preparação da auditoria real do VPS registrada em `docs/auditoria/preparacao-auditoria-vps-real-2026-05-16.md`
 
 ---
 

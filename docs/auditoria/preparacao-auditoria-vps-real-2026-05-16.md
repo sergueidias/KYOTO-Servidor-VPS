@@ -1,8 +1,8 @@
-# Readiness para Nextcloud - 2026-05-16
+# Preparação da Auditoria Real do VPS - 2026-05-16
 
 ## 🎯 Objetivo
 
-Revisar criticamente a auditoria recente do servidor KYOTO e avaliar se há prontidão documental e operacional para uma instalação futura do Nextcloud.
+Preparar a auditoria real do VPS KYOTO e revisar criticamente a documentação existente antes de qualquer avaliação definitiva de readiness para Nextcloud.
 
 Esta etapa não instala Nextcloud e não altera produção.
 
@@ -12,7 +12,9 @@ Esta etapa não instala Nextcloud e não altera produção.
 
 A revisão foi executada em `2026-05-16`, a partir do ambiente disponível ao Codex.
 
-Conclusão crítica: a prontidão para Nextcloud não está validada. A documentação está mais segura e organizada, mas os recursos reais do VPS KYOTO ainda não foram confirmados em uma sessão Linux do servidor de produção.
+Conclusão crítica: esta branch **não contém auditoria real do VPS**. Ela prepara a próxima etapa e documenta por que a pergunta “o KYOTO aguenta Nextcloud?” ainda não pode ser respondida.
+
+A prontidão para Nextcloud não está validada. A documentação está mais segura e organizada, mas os recursos reais do VPS KYOTO ainda não foram confirmados em uma sessão Linux do servidor de produção.
 
 O ambiente acessível ao Codex continuou compatível com macOS local, não com o VPS Linux esperado. Por isso, qualquer resultado de recursos abaixo serve apenas para confirmar a inconsistência de ambiente, não para dimensionar o Nextcloud.
 
@@ -26,7 +28,7 @@ Conclusão madura: o PR atual está correto como melhoria de processo e seguran�
 
 | Arquivo | Leitura crítica |
 | --- | --- |
-| `README.md` | Lista os documentos principais e agora referencia auditoria e readiness. |
+| `README.md` | Lista os documentos principais e agora referencia esta preparação de auditoria real. |
 | `docs/STATUS.md` | Registra corretamente que a auditoria real do VPS ainda é pendência. |
 | `docs/TEMPLATE.md` | Inclui seção de segurança e evita publicar credenciais ou endpoints reais. |
 | `docs/infra/vps-setup.md` | Descreve arquitetura pública em nível seguro, sem configuração sensível. |
@@ -124,7 +126,7 @@ Este documento não inclui:
 
 ---
 
-## 📌 Decisão de Readiness
+## 📌 Decisão Atual
 
 Status: **não pronto para instalar Nextcloud**.
 
