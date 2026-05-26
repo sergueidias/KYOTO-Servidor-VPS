@@ -46,3 +46,4 @@ POST /api/message
 {
   "input": "mensagem do usuário"
 }
+```

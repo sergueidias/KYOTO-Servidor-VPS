@@ -42,3 +42,16 @@ Exemplo de uso:
 ```bash
 # exemplo genérico
 comando --param YOUR_VALUE
+```
+
+---
+
+## 🔐 Segurança
+
+Nunca incluir:
+
+- credenciais reais
+- endpoints reais
+- IP do servidor
+- tokens
+- chaves privadas
